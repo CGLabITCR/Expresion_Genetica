@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="PLOCSn-Target" size="2.000000 1.984962" />
+    <ImageTarget name="3-PLOCSn-Target" size="2.000000 2.015152" />
+    <ImageTarget name="Target-Tablero" size="2.000000 1.003333" />
+    <ImageTarget name="TAA-QR" size="1.000000 0.796910" />
+    <ImageTarget name="PLOCSn-QR" size="1.000000 0.435105" />
+    <ImageTarget name="HLF1-QR" size="1.000000 0.420925" />
+    <ImageTarget name="ATG-QR" size="1.000000 0.822785" />
+    <ImageTarget name="3-PLOCSn-QR" size="1.000000 0.351209" />
+  </Tracking>
+</QCARConfig>
