@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ATG
+  - TAA
+  - 3-PLOCSn
+  - PLOCSn
+  - RBCS2
+  - RBCS_2_i_2
   layers:
   - Default
   - TransparentFX

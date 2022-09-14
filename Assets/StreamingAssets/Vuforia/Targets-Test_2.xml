@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="TAA" size="2.000000 2.000000" />
+    <ImageTarget name="ATG" size="2.000000 2.000000" />
+    <ImageTarget name="RBCS2" size="2.000000 2.000000" />
+    <ImageTarget name="RBCS2_i_2" size="2.000000 2.000000" />
+    <ImageTarget name="PLOCSn" size="2.000000 2.000000" />
+    <ImageTarget name="3_PLOCSn" size="2.000000 2.000000" />
+  </Tracking>
+</QCARConfig>
