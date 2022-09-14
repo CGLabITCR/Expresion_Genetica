@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="TABLERO" size="2.000000 1.545455" />
     <ImageTarget name="TAA" size="2.000000 2.000000" />
     <ImageTarget name="ATG" size="2.000000 2.000000" />
     <ImageTarget name="RBCS2" size="2.000000 2.000000" />
