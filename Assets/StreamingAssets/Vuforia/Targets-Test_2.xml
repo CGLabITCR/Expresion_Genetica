@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="TABLERO" size="2.000000 1.545455" />
-    <ImageTarget name="TAA" size="2.000000 2.000000" />
-    <ImageTarget name="ATG" size="2.000000 2.000000" />
-    <ImageTarget name="RBCS2" size="2.000000 2.000000" />
-    <ImageTarget name="RBCS2_i_2" size="2.000000 2.000000" />
-    <ImageTarget name="PLOCSn" size="2.000000 2.000000" />
-    <ImageTarget name="3_PLOCSn" size="2.000000 2.000000" />
+    <ImageTarget name="TABLERO" size="0.266000 0.205545" />
+    <ImageTarget name="TAA" size="0.035000 0.035000" />
+    <ImageTarget name="ATG" size="0.035000 0.035000" />
+    <ImageTarget name="RBCS2" size="0.026000 0.026000" />
+    <ImageTarget name="RBCS2_i_2" size="0.026000 0.026000" />
+    <ImageTarget name="PLOCSn" size="0.026000 0.026000" />
+    <ImageTarget name="3_PLOCSn" size="0.026000 0.026000" />
   </Tracking>
 </QCARConfig>
