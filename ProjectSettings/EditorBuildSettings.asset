@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Level/Scenes/Principal.unity
-    guid: efd0fb6e2c741994d9bec9d6185470b3
+    path: Assets/Level/Scenes/Tablero_Real_Pruebas.unity
+    guid: 1c510bba16f730343ac2e83d12443a80
   m_configObjects: {}
