@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="Marcador_Tablero_C" size="0.090001 0.028634" />
-    <ImageTarget name="Marcador_Tablero_B" size="0.090001 0.028634" />
-    <ImageTarget name="Marcador_Tablero_A" size="0.090001 0.028634" />
+    <ImageTarget name="Tablero_Marcador_Derecho" size="0.115000 0.023447" />
+    <ImageTarget name="Tablero_Marcador_Izquierdo" size="0.115000 0.023447" />
     <ImageTarget name="TER_3_PLOCSn" size="0.020000 0.020000" />
     <ImageTarget name="TER_3_CaMV_35S" size="0.020000 0.020000" />
     <ImageTarget name="GRE_LacZ" size="0.020000 0.020000" />
