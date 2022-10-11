@@ -4,16 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ATG
-  - TAA
   - 3-PLOCSn
-  - PLOCSn
-  - RBCS2
-  - RBCS_2_i_2
   - HLF1
   - LacZ
   - Gus
   - 3-CamMV_35S
+  - Gen_Interes
+  - Enzima
+  - Start
+  - Promotor
+  - Enhancer
+  - Gen_Reportero
+  - Terminador
+  - Gen_Seleccion
+  - Stop
   layers:
   - Default
   - TransparentFX
