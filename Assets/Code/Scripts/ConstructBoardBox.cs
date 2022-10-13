@@ -5,17 +5,26 @@ using UnityEngine.UI;
 
 
 
-public class Obj_Controller : MonoBehaviour
+public class ConstructBoardBox : MonoBehaviour
 {
     Material original_trigger_material;
+
+
+    public ElementTypeEnum _tipoElemento;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        UnitManager.Instance.inserElement(this.gameObject);
+
+    }
+    private void Awake()
+    {
+        UnitManager.Instance.addConstructBox( this.GetComponent<ConstructBoardBox>() );
         UnitManager.Instance.showLenghtNotification();
     }
+
+
 
     // Update is called once per frame
     void Update()

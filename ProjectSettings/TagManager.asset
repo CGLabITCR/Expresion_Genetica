@@ -18,6 +18,8 @@ TagManager:
   - Terminador
   - Gen_Seleccion
   - Stop
+  - Enzima_2
+  - Promotor_2
   layers:
   - Default
   - TransparentFX
