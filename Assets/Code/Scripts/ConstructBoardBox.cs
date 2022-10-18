@@ -11,6 +11,7 @@ public class ConstructBoardBox : MonoBehaviour
     Material original_trigger_material;
 
     public ElementTypeEnum _tipoElemento;
+    public bool _isCorrect = false;
 
     private Color _warningColor = new Color(1f, 1f, 0f, 0.5f);     //Color Amarillo
     private Color _successColor = new Color(0f, 1f, 0f, 0.5f);
@@ -80,13 +81,16 @@ public class ConstructBoardBox : MonoBehaviour
         {
             case "success":
                 //Me pinto de Color Verde
+                _isCorrect = true;
                 original_trigger_material.color = _successColor;
                 break;
             case "warning":
                 //Me pinto de Color Amarillo 
+                _isCorrect = false;
                 original_trigger_material.color = _warningColor;
                 break;
             case "failure":
+                _isCorrect = false;
                 original_trigger_material.color = _failureColor;
                 //Me pinto de Color Rojo 
                 break;

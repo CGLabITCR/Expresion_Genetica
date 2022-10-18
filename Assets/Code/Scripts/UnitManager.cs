@@ -37,7 +37,7 @@ public enum ElementNameEnum
     NOS,
     //Enhancer
     RBCS2,
-    RBCS1_i_2,
+    RBCS2_i_2,
     //Gen de Interes
     HLF1,
     //Genes Reporteros 
@@ -57,7 +57,9 @@ public enum ElementNameEnum
 }
 
 
-
+/// <summary>
+/// Class <c>UnitManager</c> Control the units of the game: elements, construct, synthesized, vector
+/// </summary>
 public class UnitManager : MonoBehaviour
 {
 
@@ -71,7 +73,7 @@ public class UnitManager : MonoBehaviour
         {ElementTypeEnum.Enzima, ElementNameEnum.Notl},
         {ElementTypeEnum.Start, ElementNameEnum.ATG},
         {ElementTypeEnum.Promotor, ElementNameEnum.CaMV_35S},
-        {ElementTypeEnum.Enhancer, ElementNameEnum.RBCS1_i_2},
+        {ElementTypeEnum.Enhancer, ElementNameEnum.RBCS2_i_2},
         {ElementTypeEnum.Gen_de_Interes, ElementNameEnum.HLF1},
         {ElementTypeEnum.Gen_Reportero, ElementNameEnum.GFP},
         {ElementTypeEnum.Terminador, ElementNameEnum._3_CamMV_35S},
@@ -151,25 +153,24 @@ public class UnitManager : MonoBehaviour
                         CanvasManager.Instance.sendNotification("BC-Son del mismo tipo y mismo elemento", 2);
                         SoundManager.Instance.PlaySuccessSound();
                         box.changeState("success");
-                        //Pintelo de Verde
+                        
+                        //Una vez que la casilla es verde, reviza todo el constructo para ver si todo esta correcto
+                        // si todo esta bien, activa el sintetizado( Tubo de Ensayo )
+                        checkConstruct();
                     }
                     else
                     {
                         CanvasManager.Instance.sendNotification("BC-Son del mismo tipo y diferente elemento", 2);
                         SoundManager.Instance.PlayFailureSound();
                         box.changeState("warning");
-                        //Pintelo de Amarillo
                     }
 
                 }
                 else
                 {
-                    //Pinta el box de color rojo 
                     CanvasManager.Instance.sendNotification("BC-Son de tipos distintos", 2);
                     SoundManager.Instance.PlayFailureSound();
                     box.changeState("failure");
-
-
                 }
 
             }else
@@ -185,8 +186,30 @@ public class UnitManager : MonoBehaviour
 
         }
 
+    }
 
+    private bool checkConstruct()
+    {
+        int constructBoxLen = _boardElementBoxes.Count;
 
+        if ( constructBoxLen == 11)
+        {
+
+            for (var i = 0; i < 11; i++)
+            {
+                if (!_boardElementBoxes[i]._isCorrect) {
+                    CanvasManager.Instance.sendNotification("Hay algun elemento mal posicionado, o faltan elementos a colocar",2);
+                    return false; 
+                }
+            }
+            return true;
+
+        }
+        else
+        {
+            CanvasManager.Instance.sendNotification("Debe Escanear todos los elementos del tablero antes de revizar", 5);
+            return false;
+        }
 
 
     }
