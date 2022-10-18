@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -109,8 +110,9 @@ public class UnitManager : MonoBehaviour
                 }
             }
             */
+            _boardElementBoxes.Add(newElementBox);
             string tipoElemento = newElementBox._tipoElemento.ToString();
-            CanvasManager.Instance.sendNotification("Nueva CASILLA: ", 3);
+            CanvasManager.Instance.sendNotification("Nueva  Casilla de tipo: " + tipoElemento, 3);
         }
         
     }
@@ -127,6 +129,69 @@ public class UnitManager : MonoBehaviour
 
         }
     }
+
+    public void boardBoxCollision( ConstructBoardBox box, Collider other)
+    {
+        ConstructPieceElement boardPiece = other.GetComponent<ConstructPieceElement>();
+        
+        //Revizamos si el otro componente es una Pieza 
+        if( boardPiece != null)
+        {
+
+            //Verificamos que esta en la lista 
+            var checkBoardPiece = _boardElementPieces.Find(piece => piece.Equals(boardPiece));
+            var checkBoardBox = _boardElementBoxes.Find(bx => bx.Equals(box));
+
+            if( checkBoardBox != null && checkBoardPiece != null)
+            {   //Verificamos el tipo
+                if( box._tipoElemento == boardPiece._tipoElemento)
+                {
+                    if(CorrectConstructElements[box._tipoElemento] == boardPiece._nombreElemento)
+                    {
+                        CanvasManager.Instance.sendNotification("BC-Son del mismo tipo y mismo elemento", 2);
+                        SoundManager.Instance.PlaySuccessSound();
+                        box.changeState("success");
+                        //Pintelo de Verde
+                    }
+                    else
+                    {
+                        CanvasManager.Instance.sendNotification("BC-Son del mismo tipo y diferente elemento", 2);
+                        SoundManager.Instance.PlayFailureSound();
+                        box.changeState("warning");
+                        //Pintelo de Amarillo
+                    }
+
+                }
+                else
+                {
+                    //Pinta el box de color rojo 
+                    CanvasManager.Instance.sendNotification("BC-Son de tipos distintos", 2);
+                    SoundManager.Instance.PlayFailureSound();
+                    box.changeState("failure");
+
+
+                }
+
+            }else
+            {
+                CanvasManager.Instance.sendNotification("BC-No se encontraron las unidades", 2);
+
+            }
+
+        }
+        else
+        {
+            CanvasManager.Instance.sendNotification("BC-No se reconocio la pieza", 2);
+
+        }
+
+
+
+
+
+    }
+
+
 
     public void showLenghtNotification()
     {
@@ -148,8 +213,6 @@ public class UnitManager : MonoBehaviour
         {
             CanvasManager.Instance.sendNotification("No hay elementos en la lista", 5);
         }
-        
-
         
     }
 
