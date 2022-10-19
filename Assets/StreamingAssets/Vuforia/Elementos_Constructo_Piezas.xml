@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="STOP_ATG__NO_QR" size="0.014000 0.011535" />
+    <ImageTarget name="STO_ATG" size="0.019000 0.019000" />
+    <ImageTarget name="GSE_Nptll" size="0.019000 0.019000" />
+    <ImageTarget name="TER_3_sba" size="0.019000 0.019000" />
+    <ImageTarget name="TER_3_sab" size="0.019000 0.019000" />
+    <ImageTarget name="TER_3_PLOCSn" size="0.019000 0.019000" />
+    <ImageTarget name="TER_3_CaMV_35S" size="0.019000 0.019000" />
+    <ImageTarget name="GRE_Luc" size="0.019000 0.019000" />
+    <ImageTarget name="GRE_LacZ" size="0.019000 0.019000" />
+    <ImageTarget name="GRE_Gus" size="0.019000 0.019000" />
+    <ImageTarget name="GRE_GFP" size="0.019000 0.019000" />
+    <ImageTarget name="GIN_HLF1" size="0.019000 0.019000" />
+    <ImageTarget name="ENH_RBCS2" size="0.019000 0.019000" />
+    <ImageTarget name="ENH_RBCS2_i_2" size="0.019000 0.019000" />
+    <ImageTarget name="PRO_sba" size="0.019000 0.019000" />
+    <ImageTarget name="PRO_sab" size="0.019000 0.019000" />
+    <ImageTarget name="PRO_PLOCSn" size="0.019000 0.019000" />
+    <ImageTarget name="PRO_NOS" size="0.019000 0.019000" />
+    <ImageTarget name="PRO_CaMV_35S" size="0.019000 0.019000" />
+    <ImageTarget name="STA_TAA" size="0.019000 0.019000" />
+    <ImageTarget name="STA_TAA__NO_QR" size="0.014000 0.011623" />
+    <ImageTarget name="ENZ_Xbal" size="0.014000 0.010362" />
+    <ImageTarget name="ENZ_Notl" size="0.014000 0.010500" />
+  </Tracking>
+</QCARConfig>

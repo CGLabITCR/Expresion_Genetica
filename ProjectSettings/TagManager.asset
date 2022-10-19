@@ -4,22 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - 3-PLOCSn
-  - HLF1
-  - LacZ
-  - Gus
-  - 3-CamMV_35S
-  - Gen_Interes
-  - Enzima
-  - Start
-  - Promotor
-  - Enhancer
-  - Gen_Reportero
-  - Terminador
-  - Gen_Seleccion
-  - Stop
-  - Enzima_2
-  - Promotor_2
+  - Piece
+  - Board
+  - Plasmid
   layers:
   - Default
   - TransparentFX

@@ -70,6 +70,7 @@ public class ConstructBoardBox : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         //Lo pinta de color azulito
+        original_trigger_material = this.GetComponent<Renderer>().material;
         original_trigger_material.color = _emptyColor;
     }
 

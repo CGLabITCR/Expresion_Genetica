@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Marcador_Plasmido" size="0.216000 0.216000" />
+    <ImageTarget name="Constructo_Sintetizado_Tubo_Ensayo" size="0.090000 0.028634" />
+  </Tracking>
+</QCARConfig>

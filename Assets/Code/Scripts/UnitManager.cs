@@ -24,7 +24,7 @@ public enum ElementTypeEnum
 public enum ElementNameEnum
 {
     //Enzima 
-    Xbal,
+    Xbal,    //Enzima 2
     Notl,
     //Start
     TAA,
@@ -101,7 +101,7 @@ public class UnitManager : MonoBehaviour
     public void addConstructBox(ConstructBoardBox newElementBox)
     {
 
-        if(!newElementBox.CompareTag("Untagged"))
+       if(!newElementBox.CompareTag("Untagged"))
         {
             /* 
             foreach( GameObject elemento in _boardElements)
@@ -130,6 +130,8 @@ public class UnitManager : MonoBehaviour
             CanvasManager.Instance.sendNotification("Nueva PIEZA: " + nombreElemento + " de tipo: " + tipoElemento, 3);
 
         }
+
+
     }
 
     public void boardBoxCollision( ConstructBoardBox box, Collider other)
