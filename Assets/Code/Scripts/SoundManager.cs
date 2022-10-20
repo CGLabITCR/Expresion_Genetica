@@ -8,7 +8,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
-    [SerializeField] private AudioSource _successSoundEffectSource, _failureSoundEffectSource;
+    [SerializeField] private AudioSource _successSoundEffectSource, _failureSoundEffectSource, _constructReadyMusic;
 
 
     private void Awake()
@@ -33,6 +33,11 @@ public class SoundManager : MonoBehaviour
     public void PlayFailureSound()
     {
         _failureSoundEffectSource.Play();
+    }
+
+    public void PlayConstructReadyMusic()
+    {
+        _constructReadyMusic.Play();
     }
 
 

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="ENZ_Xbal_QR" size="0.019000 0.019000" />
+    <ImageTarget name="ENZ_Notl_QR" size="0.019000 0.019000" />
     <ImageTarget name="STOP_ATG__NO_QR" size="0.014000 0.011535" />
     <ImageTarget name="STO_ATG" size="0.019000 0.019000" />
     <ImageTarget name="GSE_Nptll" size="0.019000 0.019000" />

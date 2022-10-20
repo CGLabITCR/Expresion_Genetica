@@ -71,7 +71,7 @@ public class UnitManager : MonoBehaviour
     private Dictionary<ElementTypeEnum, ElementNameEnum> CorrectConstructElements = new Dictionary<ElementTypeEnum, ElementNameEnum>
     {
         {ElementTypeEnum.Enzima, ElementNameEnum.Notl},
-        {ElementTypeEnum.Start, ElementNameEnum.ATG},
+        {ElementTypeEnum.Start, ElementNameEnum.TAA},
         {ElementTypeEnum.Promotor, ElementNameEnum.CaMV_35S},
         {ElementTypeEnum.Enhancer, ElementNameEnum.RBCS2_i_2},
         {ElementTypeEnum.Gen_de_Interes, ElementNameEnum.HLF1},
@@ -204,6 +204,8 @@ public class UnitManager : MonoBehaviour
                     return false; 
                 }
             }
+            CanvasManager.Instance.sendNotification("Todos Estan correctos, el constructo se esta sintetizando", 2);
+            SoundManager.Instance.PlayConstructReadyMusic();
             return true;
 
         }
