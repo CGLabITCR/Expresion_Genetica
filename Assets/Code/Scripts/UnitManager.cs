@@ -67,6 +67,8 @@ public class UnitManager : MonoBehaviour
     public static UnitManager Instance;
     private List<ConstructBoardBox> _boardElementBoxes = new List<ConstructBoardBox>();
     private List<ConstructPieceElement> _boardElementPieces = new List<ConstructPieceElement>();
+    private Plasmid _pasmid;
+    private TestTube _testTube;
 
     private Dictionary<ElementTypeEnum, ElementNameEnum> CorrectConstructElements = new Dictionary<ElementTypeEnum, ElementNameEnum>
     {
@@ -134,6 +136,18 @@ public class UnitManager : MonoBehaviour
 
     }
 
+    public void addPlasmid( Plasmid newPlasmid)
+    {
+        this._pasmid = newPlasmid;
+        CanvasManager.Instance.sendNotification("Se ha detectado el plasmido", 3);
+    }
+
+    public void addSynthesized( TestTube newTestTube)
+    {
+        this._testTube = newTestTube;
+        CanvasManager.Instance.sendNotification("Se ha detectado el Tubo de Ensayo", 3);
+    }
+
     public void boardBoxCollision( ConstructBoardBox box, Collider other)
     {
         ConstructPieceElement boardPiece = other.GetComponent<ConstructPieceElement>();
@@ -158,7 +172,18 @@ public class UnitManager : MonoBehaviour
                         
                         //Una vez que la casilla es verde, reviza todo el constructo para ver si todo esta correcto
                         // si todo esta bien, activa el sintetizado( Tubo de Ensayo )
-                        checkConstruct();
+                        if (checkConstruct())
+                        {
+                            _testTube.synthConstruct(); // Se Sintetiza el constructo
+                        }
+                        else
+                        {
+                            //Si el constructo ya esta sintetizado pero se cambio una pieza, entonces se elimina el sintetizado
+                            if (_testTube._isConstructSynthesized)
+                            {
+                                _testTube.empty();
+                            }
+                        }
                     }
                     else
                     {
