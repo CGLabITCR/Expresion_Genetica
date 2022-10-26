@@ -117,6 +117,7 @@ public class UnitManager : MonoBehaviour
             _boardElementBoxes.Add(newElementBox);
             string tipoElemento = newElementBox._tipoElemento.ToString();
             CanvasManager.Instance.sendNotification("Nueva  Casilla de tipo: " + tipoElemento, 3);
+            Handheld.Vibrate();
         }
         
     }
@@ -130,7 +131,7 @@ public class UnitManager : MonoBehaviour
             string nombreElemento = newElementPiece._nombreElemento.ToString();
 
             CanvasManager.Instance.sendNotification("Nueva PIEZA: " + nombreElemento + " de tipo: " + tipoElemento, 3);
-
+            Handheld.Vibrate();
         }
 
 
@@ -138,14 +139,23 @@ public class UnitManager : MonoBehaviour
 
     public void addPlasmid( Plasmid newPlasmid)
     {
-        this._pasmid = newPlasmid;
-        CanvasManager.Instance.sendNotification("Se ha detectado el plasmido", 3);
+        if (!newPlasmid.CompareTag("Untagged")){
+            this._pasmid = newPlasmid;
+            CanvasManager.Instance.sendNotification("Se ha detectado el plasmido", 3);
+            Handheld.Vibrate();
+        }
+        
     }
 
     public void addSynthesized( TestTube newTestTube)
     {
-        this._testTube = newTestTube;
-        CanvasManager.Instance.sendNotification("Se ha detectado el Tubo de Ensayo", 3);
+        if (!newTestTube.CompareTag("Untagged"))
+        {
+            this._testTube = newTestTube;
+            CanvasManager.Instance.sendNotification("Se ha detectado el Tubo de Ensayo", 3);
+            Handheld.Vibrate();
+        }
+        
     }
 
     public void boardBoxCollision( ConstructBoardBox box, Collider other)

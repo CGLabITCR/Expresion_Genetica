@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,8 @@ public class ConstructBoardBox : MonoBehaviour
     private Color _successColor = new Color(0f, 1f, 0f, 0.5f);
     private Color _failureColor = new Color(1f, 0f, 0f, 0.5f);
     private Color _emptyColor   = new Color(0f, 0f, 1f, 0.5f);
+
+    public GameObject _floatingTextPrefab;
 
 
     // Start is called before the first frame update
@@ -89,6 +92,13 @@ public class ConstructBoardBox : MonoBehaviour
                 //Me pinto de Color Amarillo 
                 _isCorrect = false;
                 original_trigger_material.color = _warningColor;
+
+                if (_floatingTextPrefab)
+                {
+                    showFloatingText("Mensaje de Warning");
+                }
+                
+                           
                 break;
             case "failure":
                 _isCorrect = false;
@@ -100,6 +110,13 @@ public class ConstructBoardBox : MonoBehaviour
                 // No hace nada 
                 break;
         }
+    }
+
+    public void showFloatingText(string text)
+    {
+        var floatingText = Instantiate(_floatingTextPrefab, transform.position, Quaternion.identity, transform);
+        floatingText.GetComponent<TextMeshPro>().text = text;
+
     }
 
 

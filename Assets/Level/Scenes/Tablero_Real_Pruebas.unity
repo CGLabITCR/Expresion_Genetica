@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17338738, g: 0.21673954, b: 0.29880902, a: 1}
+  m_IndirectSpecularColor: {r: 0.1733872, g: 0.21673921, b: 0.2988084, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -476,6 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tipoElemento: 7
   _isCorrect: 0
+  _floatingTextPrefab: {fileID: 6610893333822029104, guid: 0bff91cd5f29860429481546f018c83f, type: 3}
 --- !u!1 &95575456
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tipoElemento: 8
   _isCorrect: 0
+  _floatingTextPrefab: {fileID: 6610893333822029104, guid: 0bff91cd5f29860429481546f018c83f, type: 3}
 --- !u!1 &130628025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,6 +1220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tipoElemento: 5
   _isCorrect: 0
+  _floatingTextPrefab: {fileID: 6610893333822029104, guid: 0bff91cd5f29860429481546f018c83f, type: 3}
 --- !u!1 &288572753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,6 +1565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tipoElemento: 3
   _isCorrect: 0
+  _floatingTextPrefab: {fileID: 6610893333822029104, guid: 0bff91cd5f29860429481546f018c83f, type: 3}
 --- !u!1 &405398642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,6 +1874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tipoElemento: 1
   _isCorrect: 0
+  _floatingTextPrefab: {fileID: 6610893333822029104, guid: 0bff91cd5f29860429481546f018c83f, type: 3}
 --- !u!1 &431525047
 GameObject:
   m_ObjectHideFlags: 0
@@ -5112,6 +5117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tipoElemento: 0
   _isCorrect: 0
+  _floatingTextPrefab: {fileID: 6610893333822029104, guid: 0bff91cd5f29860429481546f018c83f, type: 3}
 --- !u!1 &960053051
 GameObject:
   m_ObjectHideFlags: 0
@@ -7573,6 +7579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tipoElemento: 10
   _isCorrect: 0
+  _floatingTextPrefab: {fileID: 6610893333822029104, guid: 0bff91cd5f29860429481546f018c83f, type: 3}
 --- !u!1 &1877695249
 GameObject:
   m_ObjectHideFlags: 0
@@ -7884,7 +7891,7 @@ GameObject:
   - component: {fileID: 1887084244}
   m_Layer: 0
   m_Name: TestTube
-  m_TagString: Untagged
+  m_TagString: TestTube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8275,6 +8282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tipoElemento: 0
   _isCorrect: 0
+  _floatingTextPrefab: {fileID: 0}
 --- !u!114 &1905301535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8310,7 +8318,7 @@ GameObject:
   - component: {fileID: 1928912186}
   m_Layer: 0
   m_Name: Plasmid
-  m_TagString: Untagged
+  m_TagString: Plasmid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8823,6 +8831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tipoElemento: 2
   _isCorrect: 0
+  _floatingTextPrefab: {fileID: 6610893333822029104, guid: 0bff91cd5f29860429481546f018c83f, type: 3}
 --- !u!1 &2043450732
 GameObject:
   m_ObjectHideFlags: 0
@@ -8952,6 +8961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tipoElemento: 4
   _isCorrect: 0
+  _floatingTextPrefab: {fileID: 6610893333822029104, guid: 0bff91cd5f29860429481546f018c83f, type: 3}
 --- !u!1 &2058467253
 GameObject:
   m_ObjectHideFlags: 0
@@ -9179,6 +9189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tipoElemento: 6
   _isCorrect: 0
+  _floatingTextPrefab: {fileID: 6610893333822029104, guid: 0bff91cd5f29860429481546f018c83f, type: 3}
 --- !u!1 &2081616534
 GameObject:
   m_ObjectHideFlags: 0
@@ -9929,3 +9940,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tipoElemento: 9
   _isCorrect: 0
+  _floatingTextPrefab: {fileID: 6610893333822029104, guid: 0bff91cd5f29860429481546f018c83f, type: 3}
