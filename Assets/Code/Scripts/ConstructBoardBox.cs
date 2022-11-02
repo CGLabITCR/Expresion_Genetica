@@ -24,17 +24,30 @@ public class ConstructBoardBox : MonoBehaviour
     public GameObject _successPrefab;
     public GameObject _failurePrefab;
 
+    private GameObject _success;
+    private GameObject _failure;
+
     // Start is called before the first frame update
     void Start()
     {
 
     }
+
     private void Awake()
     {
         //Guarda la unidad en el Unit Manager 
         UnitManager.Instance.addConstructBox( this.GetComponent<ConstructBoardBox>() );
         //Muestra una notificacion de la cantidad de elementos de BoardBox dentro del unit manager
         UnitManager.Instance.showLenghtNotification();
+
+       _success = Instantiate(_successPrefab, this.transform.position, Quaternion.identity, this.transform);
+       _failure = Instantiate(_failurePrefab, this.transform.position, Quaternion.identity, this.transform);
+
+        _successPrefab = _success;
+        _failurePrefab = _failure;
+
+        _successPrefab.SetActive(false);
+        _failurePrefab.SetActive(false);
     }
 
 
@@ -77,6 +90,9 @@ public class ConstructBoardBox : MonoBehaviour
         //Lo pinta de color azulito
         original_trigger_material = this.GetComponent<Renderer>().material;
         original_trigger_material.color = _emptyColor;
+
+        _failurePrefab.SetActive(false);
+        _successPrefab.SetActive(false);
     }
 
     public void changeState( string state)
@@ -89,22 +105,28 @@ public class ConstructBoardBox : MonoBehaviour
                 //Me pinto de Color Verde
                 _isCorrect = true;
                 original_trigger_material.color = _successColor;
+                _failurePrefab.SetActive(false);
+                _successPrefab.SetActive(true);
                 break;
             case "warning":
                 //Me pinto de Color Amarillo 
                 _isCorrect = false;
                 original_trigger_material.color = _warningColor;
 
+                _failurePrefab.SetActive(true);
+                _successPrefab.SetActive(false);
+
                 if (_floatingTextPrefab)
                 {
                     showFloatingText("Mensaje de Warning");
                 }
-                
-                           
+                  
                 break;
             case "failure":
                 _isCorrect = false;
                 original_trigger_material.color = _failureColor;
+                _failurePrefab.SetActive(true);
+                _successPrefab.SetActive(false);
                 //Me pinto de Color Rojo 
                 break;
 
