@@ -21,6 +21,8 @@ public class ConstructBoardBox : MonoBehaviour
 
     public GameObject _floatingTextPrefab;
 
+    public GameObject _successPrefab;
+    public GameObject _failurePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -114,7 +116,7 @@ public class ConstructBoardBox : MonoBehaviour
 
     public void showFloatingText(string text)
     {
-        var floatingText = Instantiate(_floatingTextPrefab, transform.position, Quaternion.identity, transform);
+        var floatingText = Instantiate(_floatingTextPrefab, this.transform.position, Quaternion.identity, this.transform);
         floatingText.GetComponent<TextMeshPro>().text = text;
 
     }

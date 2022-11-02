@@ -31,11 +31,13 @@ public class ArrowGenerator : MonoBehaviour
         //make sure Mesh Renderer has a material
         mesh = new Mesh();
         this.GetComponent<MeshFilter>().mesh = mesh;
+
+        GenerateArrow();
     }
 
     void Update()
     {
-        GenerateArrow();
+       
     }
 
     //arrow is generated starting at Vector3.zero
@@ -50,8 +52,8 @@ public class ArrowGenerator : MonoBehaviour
         Vector3 stemOrigin = Vector3.zero;
         float stemHalfWidth = stemWidth / 2f;
         //Stem points
-        verticesList.Add(stemOrigin + (stemHalfWidth * Vector3.down));
-        verticesList.Add(stemOrigin + (stemHalfWidth * Vector3.up));
+        verticesList.Add(stemOrigin + (stemHalfWidth * Vector3.back));
+        verticesList.Add(stemOrigin + (stemHalfWidth * Vector3.forward));
         verticesList.Add(verticesList[0] + (stemLength * Vector3.right));
         verticesList.Add(verticesList[1] + (stemLength * Vector3.right));
 
@@ -69,8 +71,8 @@ public class ArrowGenerator : MonoBehaviour
         float tipHalfWidth = tipWidth / 2;
 
         //tip points
-        verticesList.Add(tipOrigin + (tipHalfWidth * Vector3.up));
-        verticesList.Add(tipOrigin + (tipHalfWidth * Vector3.down));
+        verticesList.Add(tipOrigin + (tipHalfWidth * Vector3.forward));
+        verticesList.Add(tipOrigin + (tipHalfWidth * Vector3.back));
         verticesList.Add(tipOrigin + (tipLength * Vector3.right));
 
         //tip triangle
