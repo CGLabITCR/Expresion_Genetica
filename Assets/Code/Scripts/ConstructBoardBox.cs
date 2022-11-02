@@ -5,27 +5,39 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+//Funcion generate arrow gracias a: https://www.youtube.com/watch?v=8lXDLy24rJw
+//Codigo: https://pastebin.com/HmrYF0xr
 
 public class ConstructBoardBox : MonoBehaviour
 {
     Material original_trigger_material;
 
     public ElementTypeEnum _tipoElemento;
-    public bool _isCorrect = false;
+    private bool _isCorrect = false;
 
+    //Cambio de la forma a Arrow 
+    public float stemLength;
+    public float stemWidth ;
+    public float tipLength;
+    public float tipWidth;
+
+    [System.NonSerialized]
+    private List<Vector3> verticesList;
+    [System.NonSerialized]
+    private List<int> trianglesList;
+    private Mesh mesh;
+
+
+    //Colores 
     private Color _warningColor = new Color(1f, 1f, 0f, 0.5f);     //Color Amarillo
     private Color _successColor = new Color(0f, 1f, 0f, 0.5f);
     private Color _failureColor = new Color(1f, 0f, 0f, 0.5f);
     private Color _emptyColor   = new Color(0f, 0f, 1f, 0.5f);
 
     public GameObject _floatingTextPrefab;
-
     public GameObject _successPrefab;
     public GameObject _failurePrefab;
 
-    private GameObject _success;
-    private GameObject _failure;
 
     // Start is called before the first frame update
     void Start()
@@ -40,8 +52,12 @@ public class ConstructBoardBox : MonoBehaviour
         //Muestra una notificacion de la cantidad de elementos de BoardBox dentro del unit manager
         UnitManager.Instance.showLenghtNotification();
 
-       _success = Instantiate(_successPrefab, this.transform.position, Quaternion.identity, this.transform);
-       _failure = Instantiate(_failurePrefab, this.transform.position, Quaternion.identity, this.transform);
+        mesh = new Mesh();
+        this.GetComponent<MeshFilter>().mesh = mesh;
+        GenerateArrow();
+
+        var _success = Instantiate(_successPrefab, this.transform.position, Quaternion.identity, this.transform);
+        var _failure = Instantiate(_failurePrefab, this.transform.position, Quaternion.identity, this.transform);
 
         _successPrefab = _success;
         _failurePrefab = _failure;
@@ -141,6 +157,56 @@ public class ConstructBoardBox : MonoBehaviour
         var floatingText = Instantiate(_floatingTextPrefab, this.transform.position, Quaternion.identity, this.transform);
         floatingText.GetComponent<TextMeshPro>().text = text;
 
+    }
+
+
+    private void GenerateArrow()
+    {
+        //setup
+        verticesList = new List<Vector3>();
+        trianglesList = new List<int>();
+
+        //stem setup
+        Vector3 stemOrigin = Vector3.zero;
+        float stemHalfWidth = stemWidth / 2f;
+        //Stem points
+        verticesList.Add(stemOrigin + (stemHalfWidth * Vector3.back));
+        verticesList.Add(stemOrigin + (stemHalfWidth * Vector3.forward));
+        verticesList.Add(verticesList[0] + (stemLength * Vector3.right));
+        verticesList.Add(verticesList[1] + (stemLength * Vector3.right));
+
+        //Stem triangles
+        trianglesList.Add(0);
+        trianglesList.Add(1);
+        trianglesList.Add(3);
+
+        trianglesList.Add(0);
+        trianglesList.Add(3);
+        trianglesList.Add(2);
+
+        //tip setup
+        Vector3 tipOrigin = stemLength * Vector3.right;
+        float tipHalfWidth = tipWidth / 2;
+
+        //tip points
+        verticesList.Add(tipOrigin + (tipHalfWidth * Vector3.forward));
+        verticesList.Add(tipOrigin + (tipHalfWidth * Vector3.back));
+        verticesList.Add(tipOrigin + (tipLength * Vector3.right));
+
+        //tip triangle
+        trianglesList.Add(4);
+        trianglesList.Add(6);
+        trianglesList.Add(5);
+
+        //assign lists to mesh.
+        mesh.vertices = verticesList.ToArray();
+        mesh.triangles = trianglesList.ToArray();
+    }
+
+
+    public bool getIsCorrect()
+    {
+        return this._isCorrect;
     }
 
 

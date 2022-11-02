@@ -234,7 +234,7 @@ public class UnitManager : MonoBehaviour
 
             for (var i = 0; i < 11; i++)
             {
-                if (!_boardElementBoxes[i]._isCorrect) {
+                if (!_boardElementBoxes[i].getIsCorrect()) {
                     CanvasManager.Instance.sendNotification("Hay algun elemento mal posicionado, o faltan elementos a colocar",2);
                     return false; 
                 }

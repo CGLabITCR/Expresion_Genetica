@@ -23,16 +23,15 @@ public class ArrowGenerator : MonoBehaviour
 
     void Start()
     {
-
+        //make sure Mesh Renderer has a material
+        mesh = new Mesh();
+        this.GetComponent<MeshFilter>().mesh = mesh;
+        GenerateArrow();
     }
 
     private void Awake()
     {
-        //make sure Mesh Renderer has a material
-        mesh = new Mesh();
-        this.GetComponent<MeshFilter>().mesh = mesh;
-
-        GenerateArrow();
+        
     }
 
     void Update()
