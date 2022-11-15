@@ -7890,15 +7890,16 @@ GameObject:
   - component: {fileID: 1887084240}
   - component: {fileID: 1887084243}
   - component: {fileID: 1887084242}
-  - component: {fileID: 1887084241}
   - component: {fileID: 1887084244}
+  - component: {fileID: 1887084246}
+  - component: {fileID: 1887084245}
   m_Layer: 0
   m_Name: TestTube
   m_TagString: TestTube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1887084240
 Transform:
   m_ObjectHideFlags: 0
@@ -7907,27 +7908,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887084239}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0017, y: 0.0284, z: 0}
+  m_LocalPosition: {x: -0.0008, y: 0.0284, z: 0}
   m_LocalScale: {x: 0.02, y: 0.03, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1777127636}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1887084241
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887084239}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1887084242
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7991,6 +7978,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isConstructSynthesized: 0
+--- !u!54 &1887084245
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887084239}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!65 &1887084246
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887084239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 0.5, z: 1}
+  m_Center: {x: 0, y: -0.7, z: 0}
 --- !u!1 &1905301529
 GameObject:
   m_ObjectHideFlags: 0
@@ -8300,7 +8316,7 @@ GameObject:
   - component: {fileID: 1928912181}
   - component: {fileID: 1928912184}
   - component: {fileID: 1928912183}
-  - component: {fileID: 1928912182}
+  - component: {fileID: 1928912187}
   - component: {fileID: 1928912185}
   - component: {fileID: 1928912186}
   m_Layer: 0
@@ -8309,7 +8325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1928912181
 Transform:
   m_ObjectHideFlags: 0
@@ -8325,20 +8341,6 @@ Transform:
   m_Father: {fileID: 1828531206}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1928912182
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1928912180}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1928912183
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8403,7 +8405,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1928912186
 MonoBehaviour:
@@ -8418,6 +8420,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isCorrect: 0
+--- !u!65 &1928912187
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928912180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 2, z: 0.3}
+  m_Center: {x: 0.3, y: 0, z: 0.25}
 --- !u!1 &1964956670
 GameObject:
   m_ObjectHideFlags: 0
