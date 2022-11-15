@@ -12,6 +12,9 @@ public class Plasmid : MonoBehaviour
 
     private Color _successColor = new Color(0f, 1f, 0f, 0.5f);
     private Color _failureColor = new Color(1f, 0f, 0f, 0.5f);
+
+    public GameObject _tobaccoPlant;
+
     // Start is called before the first frame update
     void Start()
     {

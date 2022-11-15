@@ -60,7 +60,7 @@ public class ConstructBoardBox : MonoBehaviour
         GenerateArrow();
 
         _centerOffSet = (stemLength + tipLength) / 2;
-        var offset = this.transform.position + (this.transform.right * _centerOffSet);
+        var offset = this.transform.position + (this.transform.right * _centerOffSet) + (this.transform.up * 0.015f);
         
         var _success = Instantiate(_successPrefab, offset, Quaternion.identity, this.transform);
         var _failure = Instantiate(_failurePrefab, offset, Quaternion.identity, this.transform);
@@ -127,7 +127,7 @@ public class ConstructBoardBox : MonoBehaviour
                 //Me pinto de Color Verde
                 _isCorrect = true;
                 _isChecked = true;
-                original_trigger_material.color = _successColor;
+                //original_trigger_material.color = _successColor;
                 _failurePrefab.SetActive(false);
                 _successPrefab.SetActive(true);
                 break;
@@ -136,7 +136,7 @@ public class ConstructBoardBox : MonoBehaviour
                 //Me pinto de Color Amarillo 
                 _isCorrect = false;
                 _isChecked = true;
-                original_trigger_material.color = _warningColor;
+                //original_trigger_material.color = _warningColor;
 
                 _failurePrefab.SetActive(true);
                 _successPrefab.SetActive(false);
@@ -159,7 +159,7 @@ public class ConstructBoardBox : MonoBehaviour
             case "failure":
                 _isCorrect = false;
                 _isChecked = true;
-                original_trigger_material.color = _failureColor;
+                //original_trigger_material.color = _failureColor;
                 _failurePrefab.SetActive(true);
                 _successPrefab.SetActive(false);
                 //Me pinto de Color Rojo 
@@ -173,7 +173,7 @@ public class ConstructBoardBox : MonoBehaviour
 
     public void showFloatingText(string text)
     {
-        var offset = this.transform.position + (this.transform.right * _centerOffSet) + (this.transform.up * 0.025f);
+        var offset = this.transform.position + (this.transform.right * _centerOffSet) + (this.transform.up * 0.030f);
         var floatingText = Instantiate(_floatingTextPrefab, offset, Quaternion.identity, this.transform);
         floatingText.GetComponent<TextMeshPro>().text = text;
 
