@@ -69,6 +69,7 @@ public class UnitManager : MonoBehaviour
     private List<ConstructPieceElement> _boardElementPieces = new List<ConstructPieceElement>();
     private Plasmid _pasmid;
     private TestTube _testTube;
+    private bool _isConstructCorrect = false;
 
     private Dictionary<ElementTypeEnum, ElementNameEnum> CorrectConstructElements = new Dictionary<ElementTypeEnum, ElementNameEnum>
     {
@@ -116,8 +117,6 @@ public class UnitManager : MonoBehaviour
             */
             _boardElementBoxes.Add(newElementBox);
             string tipoElemento = newElementBox._tipoElemento.ToString();
-            CanvasManager.Instance.sendNotification("Nueva  Casilla de tipo: " + tipoElemento, 3);
-            Handheld.Vibrate();
         }
         
     }
@@ -177,7 +176,10 @@ public class UnitManager : MonoBehaviour
                     if(CorrectConstructElements[box._tipoElemento] == boardPiece._nombreElemento)
                     {
                         CanvasManager.Instance.sendNotification("BC-Son del mismo tipo y mismo elemento", 2);
-                        SoundManager.Instance.PlaySuccessSound();
+                        
+                        //Si no esta correcto, entonces reproduzca el sonido 
+                        if( !box.getIsCorrect() ) SoundManager.Instance.PlaySuccessSound();
+
                         box.changeState("success");
                         
                         //Una vez que la casilla es verde, reviza todo el constructo para ver si todo esta correcto
@@ -198,7 +200,9 @@ public class UnitManager : MonoBehaviour
                     else
                     {
                         CanvasManager.Instance.sendNotification("BC-Son del mismo tipo y diferente elemento", 2);
-                        SoundManager.Instance.PlayFailureSound();
+                        //Si esta correcto entonce reproduzca el sonido 
+                        if ( box.getIsCorrect() ) SoundManager.Instance.PlayFailureSound();
+                        if ( !box.getIsChecked() ) SoundManager.Instance.PlayFailureSound(); //Solo para la primera vez que se detecta que el elemento esta incorrecto. 
                         box.changeState("warning");
                     }
 
@@ -240,7 +244,8 @@ public class UnitManager : MonoBehaviour
                 }
             }
             CanvasManager.Instance.sendNotification("Todos Estan correctos, el constructo se esta sintetizando", 2);
-            SoundManager.Instance.PlayConstructReadyMusic();
+            if(!this._isConstructCorrect) SoundManager.Instance.PlayConstructReadyMusic();
+            this._isConstructCorrect = true;
             return true;
 
         }
@@ -249,7 +254,6 @@ public class UnitManager : MonoBehaviour
             CanvasManager.Instance.sendNotification("Debe Escanear todos los elementos del tablero antes de revizar", 5);
             return false;
         }
-
 
     }
 

@@ -13,13 +13,16 @@ public class ConstructBoardBox : MonoBehaviour
     Material original_trigger_material;
 
     public ElementTypeEnum _tipoElemento;
+
     private bool _isCorrect = false;
+    private bool _isChecked = false;
 
     //Cambio de la forma a Arrow 
     public float stemLength;
     public float stemWidth ;
     public float tipLength;
     public float tipWidth;
+    private float _centerOffSet;
 
     [System.NonSerialized]
     private List<Vector3> verticesList;
@@ -56,8 +59,11 @@ public class ConstructBoardBox : MonoBehaviour
         this.GetComponent<MeshFilter>().mesh = mesh;
         GenerateArrow();
 
-        var _success = Instantiate(_successPrefab, this.transform.position, Quaternion.identity, this.transform);
-        var _failure = Instantiate(_failurePrefab, this.transform.position, Quaternion.identity, this.transform);
+        _centerOffSet = (stemLength + tipLength) / 2;
+        var offset = this.transform.position + (this.transform.right * _centerOffSet);
+        
+        var _success = Instantiate(_successPrefab, offset, Quaternion.identity, this.transform);
+        var _failure = Instantiate(_failurePrefab, offset, Quaternion.identity, this.transform);
 
         _successPrefab = _success;
         _failurePrefab = _failure;
@@ -120,13 +126,16 @@ public class ConstructBoardBox : MonoBehaviour
             case "success":
                 //Me pinto de Color Verde
                 _isCorrect = true;
+                _isChecked = true;
                 original_trigger_material.color = _successColor;
                 _failurePrefab.SetActive(false);
                 _successPrefab.SetActive(true);
                 break;
+
             case "warning":
                 //Me pinto de Color Amarillo 
                 _isCorrect = false;
+                _isChecked = true;
                 original_trigger_material.color = _warningColor;
 
                 _failurePrefab.SetActive(true);
@@ -134,12 +143,22 @@ public class ConstructBoardBox : MonoBehaviour
 
                 if (_floatingTextPrefab)
                 {
-                    showFloatingText("Mensaje de Warning");
+                    var typeStr = _tipoElemento.ToString();
+                    var isWrong = " Incorrecto";
+                    typeStr.Replace("_2", "");
+
+                    if (typeStr == "Enzima")
+                    {
+                        isWrong = " Incorrecta";
+                    }
+
+                    showFloatingText(typeStr + isWrong);
                 }
                   
                 break;
             case "failure":
                 _isCorrect = false;
+                _isChecked = true;
                 original_trigger_material.color = _failureColor;
                 _failurePrefab.SetActive(true);
                 _successPrefab.SetActive(false);
@@ -154,7 +173,8 @@ public class ConstructBoardBox : MonoBehaviour
 
     public void showFloatingText(string text)
     {
-        var floatingText = Instantiate(_floatingTextPrefab, this.transform.position, Quaternion.identity, this.transform);
+        var offset = this.transform.position + (this.transform.right * _centerOffSet) + (this.transform.up * 0.025f);
+        var floatingText = Instantiate(_floatingTextPrefab, offset, Quaternion.identity, this.transform);
         floatingText.GetComponent<TextMeshPro>().text = text;
 
     }
@@ -201,6 +221,7 @@ public class ConstructBoardBox : MonoBehaviour
         //assign lists to mesh.
         mesh.vertices = verticesList.ToArray();
         mesh.triangles = trianglesList.ToArray();
+        
     }
 
 
@@ -209,5 +230,9 @@ public class ConstructBoardBox : MonoBehaviour
         return this._isCorrect;
     }
 
+    public bool getIsChecked()
+    {
+        return this._isChecked;
+    }
 
 }
