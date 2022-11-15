@@ -111,7 +111,7 @@ public class ConstructBoardBox : MonoBehaviour
     {
         //Lo pinta de color azulito
         original_trigger_material = this.GetComponent<Renderer>().material;
-        original_trigger_material.color = _emptyColor;
+        //original_trigger_material.color = _emptyColor;
 
         _failurePrefab.SetActive(false);
         _successPrefab.SetActive(false);
