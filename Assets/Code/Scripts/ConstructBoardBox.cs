@@ -62,8 +62,9 @@ public class ConstructBoardBox : MonoBehaviour
         _centerOffSet = (stemLength + tipLength) / 2;
         var offset = this.transform.position + (this.transform.right * _centerOffSet) + (this.transform.up * 0.015f);
         
+
         var _success = Instantiate(_successPrefab, offset, Quaternion.identity, this.transform);
-        var _failure = Instantiate(_failurePrefab, offset, Quaternion.identity, this.transform);
+        var _failure = Instantiate(_failurePrefab, offset, Quaternion.AngleAxis(90, Vector3.up), this.transform);
 
         _successPrefab = _success;
         _failurePrefab = _failure;

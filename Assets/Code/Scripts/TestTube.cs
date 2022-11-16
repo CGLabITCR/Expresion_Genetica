@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -11,6 +12,8 @@ public class TestTube : MonoBehaviour
     private Color _successColor = new Color(0f, 1f, 0f, 0.5f);
     private Color _failureColor = new Color(1f, 0f, 0f, 0.5f);
 
+    public GameObject _tube;
+
 
     public bool _isConstructSynthesized = false;
 
@@ -18,12 +21,13 @@ public class TestTube : MonoBehaviour
     void Start()
     {
         UnitManager.Instance.addSynthesized(this.GetComponent<TestTube>());
+        
 
     }
 
     public void synthConstruct()
     {
-        original_trigger_material = this.GetComponent<Renderer>().material;
+        original_trigger_material = _tube.GetComponent<Renderer>().material;
         _isConstructSynthesized = true;
         original_trigger_material.color = _successColor;
         CanvasManager.Instance.sendNotification("El Constructo se ha sintetizado", 3);
@@ -31,9 +35,10 @@ public class TestTube : MonoBehaviour
 
     public void empty()
     {
-        original_trigger_material = this.GetComponent<Renderer>().material;
-        _isConstructSynthesized = false;
+        original_trigger_material = _tube.GetComponent<Renderer>().material;
         original_trigger_material.color = _failureColor;
+        _isConstructSynthesized = false;
+        
     }
 
     // Update is called once per frame

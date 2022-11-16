@@ -10,6 +10,7 @@ public class Plasmid : MonoBehaviour
 
     public bool _isCorrect = false;
 
+    private Color _originalColor;
     private Color _successColor = new Color(0f, 1f, 0f, 0.5f);
     private Color _failureColor = new Color(1f, 0f, 0f, 0.5f);
 
@@ -24,6 +25,7 @@ public class Plasmid : MonoBehaviour
     private void Awake()
     {
         UnitManager.Instance.addPlasmid(this.GetComponent<Plasmid>());
+        _originalColor = this.GetComponent<Renderer>().material.color;
     }
 
     // Update is called once per frame
@@ -67,7 +69,7 @@ public class Plasmid : MonoBehaviour
                 original_trigger_material.color = _failureColor;
                 break;
             default:
-                // No hace nada 
+                original_trigger_material.color = _originalColor;
                 break;
         }
     }
