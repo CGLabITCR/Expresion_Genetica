@@ -1,78 +1,90 @@
-
 <h1 align="center">
   <br>
-  <a href="Made with Vuforia"><img src="https://www.elementalsweb.com/wp-content/themes/sd_theme/images/ar-landing/vuforia-logo.png" alt="Markdownify" width="200"></a>
+  <a href="CG Lab Logo"><img src="https://www.elementalsweb.com/wp-content/themes/sd_theme/images/ar-landing/vuforia-logo.png" alt="Markdownify" width="200"></a>
   <br>
   Proyecto de Expresión Genética 
   <br>
 </h1>
 
-<h4 align="center">LxD</h4>
-
-<!-- <p align="center">
-  <a href="https://badge.fury.io/js/electron-markdownify">
-    <img src="https://badge.fury.io/js/electron-markdownify.svg"
-         alt="Gitter">
-  </a>
-  <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
-  <a href="https://saythanks.io/to/bullredeyes@gmail.com">
-      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
-  </a>
-  <a href="https://www.paypal.me/AmitMerchant">
-    <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
-  </a>
-</p> -->
+<h4 align="center">LxD • CG Lab</h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#download">Download</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#related">Related</a> •
+  <a href="#authors">Authors</a> •
+  <a href="#you-may-also-like">Related</a> •
   <a href="#license">License</a>
 </p>
 
 <!-- ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
  -->
+
 ## Key Features
 
+This project is created for Biotechnology Students to help them better understand concepts and methodologies regarding the subject of Genetical Expression.
 
+This app is aim top explore the basics of configuring and synthetizing a construct, inserting the sinthetized construct into a plasmid, with the goal to create a vector.
+
+The experiment we explore in this AR experience is to identify the method and elements for the production of the “human lactoferrin” protein in a tobacco plant.
+
+To achieve the goal of the experiment the app will help students to:
+
+<ul>
+ <li>Prepare the construct for gene expression.</li>
+ <li>Visualize the total assembly of the construct within the cloned plasmid.</li>
+ <li>Observe the result of the expressed  gene of interest in a tobacco plant with the use of ultraviolet light.</li>
+</ul>
 
 ## How To Use
 
-
 > **Note**
-
 
 ## Download
 
+## Software
 
+- [Unity](<[http://electron.atom.io/](https://unity.com/)>)
+- [Vuforia](<[https://nodejs.org/](https://developer.vuforia.com/)>)
 
-## Emailware
+## Authors
 
+<ul>
+  <li>
+    <h3>Yoselyn Walsh Zúñiga </h3>
+    <p>Industrial Design Engineer and Professor at ITCR</p>
+    <a href = "mailto: d4n11083@estudiantec.cr">d4n11083@estudiantec.cr</a> 
+  </li>
+  <li>
+    <h3>Rogelio</h3>
+    <p>Software Engineer and Professor at ITCR</p>
+    <a href = "mailto: d4n11083@estudiantec.cr">d4n11083@estudiantec.cr</a> 
+  </li>
+  <li>
+    <h3>Daniela</h3>
+    <p>Industrial Design Engineert</p>
+    <a href = "mailto: d4n11083@estudiantec.cr">d4n11083@estudiantec.cr</a> 
+  </li>
 
-## Credits
+  <li>
+    <h3>Josué Chaves Araya</h3>
+    <p>Software Engineer Student</p>
+    <a href = "mailto: d4n11083@estudiantec.cr">d4n11083@estudiantec.cr</a> 
+  </li>
 
-This software uses the following packages:
+  <li>
+    <h3>Monserrat Jarquín Cordero</h3>
+    <p>Biotech Enginneer and Professor at ITCR</p>
+    <a href = "mailto: d4n11083@estudiantec.cr">d4n11083@estudiantec.cr</a> 
+  </li>
 
-- [Unity]([http://electron.atom.io/](https://unity.com/))
-- [Vuforia]([https://nodejs.org/](https://developer.vuforia.com/))
-
-
-## Related
-
-
-
-## Support
-
+</ul>
 
 
 ## You may also like...
 
 
+
 ## License
 
 MIT
-
-
-
