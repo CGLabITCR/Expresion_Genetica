@@ -487,7 +487,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &185637576
 GameObject:
@@ -655,7 +655,7 @@ Transform:
   - {fileID: 1905301533}
   - {fileID: 768086207}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &196128807
 GameObject:
@@ -846,7 +846,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &253154600
 GameObject:
@@ -1097,7 +1097,7 @@ Transform:
   - {fileID: 95575457}
   - {fileID: 458438023}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &372331093
 GameObject:
@@ -1424,7 +1424,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &430493136
 GameObject:
@@ -3063,7 +3063,7 @@ Transform:
   - {fileID: 1828531206}
   - {fileID: 1777127636}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823346879
 GameObject:
@@ -3427,134 +3427,6 @@ MonoBehaviour:
   _successSoundEffectSource: {fileID: 196128809}
   _failureSoundEffectSource: {fileID: 658032303}
   _constructReadyMusic: {fileID: 1973045613}
---- !u!1001 &902973509
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.5787755
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.222474
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144112312919900573, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_Name
-      value: Tobacco
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
---- !u!1001 &916115826
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1828531206}
-    m_Modifications:
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144112312919900573, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_Name
-      value: Tobacco
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144112312919900573, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
---- !u!4 &916115827 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1624315560597756711, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-  m_PrefabInstance: {fileID: 916115826}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &916115828 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2144112312919900573, guid: b9dc70d44b21b0f41ab00b207a52edef, type: 3}
-  m_PrefabInstance: {fileID: 916115826}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &916154623
 GameObject:
   m_ObjectHideFlags: 0
@@ -4006,7 +3878,7 @@ PrefabInstance:
     - target: {fileID: 3023505269647067899, guid: 684544d5cb4abde459f4b94955d77b5c, type: 3}
       propertyPath: _tobaccoPlant
       value: 
-      objectReference: {fileID: 1283846543719097007, guid: d8bf7377d36858942808dc4077a13aba, type: 3}
+      objectReference: {fileID: 4374935262674981595, guid: 6d61bf3c8563c444ebb586a958b3d57e, type: 3}
     - target: {fileID: 7312305130134991578, guid: 684544d5cb4abde459f4b94955d77b5c, type: 3}
       propertyPath: m_Name
       value: petri dish Variant
@@ -4021,7 +3893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7940222633717934176, guid: 684544d5cb4abde459f4b94955d77b5c, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7940222633717934176, guid: 684544d5cb4abde459f4b94955d77b5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4423,7 +4295,7 @@ Transform:
   - {fileID: 1353562713}
   - {fileID: 1035685975}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1342747387 stripped
 GameObject:
@@ -5337,7 +5209,7 @@ Transform:
   - {fileID: 2081616538}
   - {fileID: 2058467257}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1716415970
 GameObject:
@@ -5815,7 +5687,7 @@ Transform:
   - {fileID: 1628133734}
   - {fileID: 1532770336}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1828531205
 GameObject:
@@ -5848,7 +5720,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 916115827}
   - {fileID: 954055256}
   m_Father: {fileID: 804148288}
   m_RootOrder: 0
@@ -5906,34 +5777,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 916115828}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 954055257}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 916115828}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -6748,7 +6595,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1973045611
 GameObject:

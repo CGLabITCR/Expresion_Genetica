@@ -62,6 +62,9 @@ public class Plasmid : MonoBehaviour
                 //Me pinto de Color Verde
                 _isCorrect = true;
                 original_trigger_material.color = _successColor;
+                //Instancio la Planta
+                Instantiate(_tobaccoPlant, this.transform.position, Quaternion.identity);
+
                 break;
             case "failure":
                 //Me pinto de Color Rojo 
