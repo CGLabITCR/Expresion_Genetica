@@ -4824,7 +4824,7 @@ GameObject:
   - component: {fileID: 232805061587364760}
   m_Layer: 0
   m_Name: Tobacco_Plant_W_Light_For_Petri_Dish
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
