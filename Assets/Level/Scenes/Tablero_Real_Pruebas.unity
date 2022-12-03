@@ -3876,9 +3876,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1828531206}
     m_Modifications:
     - target: {fileID: 3023505269647067899, guid: 684544d5cb4abde459f4b94955d77b5c, type: 3}
+      propertyPath: _isCorrect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023505269647067899, guid: 684544d5cb4abde459f4b94955d77b5c, type: 3}
       propertyPath: _tobaccoPlant
       value: 
-      objectReference: {fileID: 4374935262674981595, guid: 6d61bf3c8563c444ebb586a958b3d57e, type: 3}
+      objectReference: {fileID: 2473481833024257372, guid: 197ff586e0e2b61489b95ed1aa4c1836, type: 3}
     - target: {fileID: 7312305130134991578, guid: 684544d5cb4abde459f4b94955d77b5c, type: 3}
       propertyPath: m_Name
       value: petri dish Variant
@@ -4479,14 +4483,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361492391}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.058, y: 0.244, z: 10.146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1778305116}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1361492397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7023,7 +7027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &2058467254
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8556,6 +8560,10 @@ PrefabInstance:
       propertyPath: _tube
       value: 
       objectReference: {fileID: 826109185}
+    - target: {fileID: -5040283608829063544, guid: a704e732f0198934a84e4223f8a7e011, type: 3}
+      propertyPath: _isConstructSynthesized
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1445361136609551927, guid: a704e732f0198934a84e4223f8a7e011, type: 3}
       propertyPath: m_IsActive
       value: 1
