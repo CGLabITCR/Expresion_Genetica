@@ -152,6 +152,11 @@ public class UnitManager : MonoBehaviour
         {
             this._testTube = newTestTube;
             CanvasManager.Instance.sendNotification("Se ha detectado el Tubo de Ensayo", 3);
+            if (checkConstruct())
+            {
+                this._testTube.synthConstruct();
+            }
+
             Handheld.Vibrate();
         }
         

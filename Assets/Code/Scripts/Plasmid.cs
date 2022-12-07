@@ -74,7 +74,7 @@ public class Plasmid : MonoBehaviour
                 _isCorrect = true;
                 //original_trigger_material.color = _successColor;
                 //Instancio la Planta
-                _PlasmidLiquid.SetActive(true);
+                this._PlasmidLiquid.SetActive(true);
                 this._tobaccoPlant.SetActive(true);
 
                 break;
@@ -84,7 +84,7 @@ public class Plasmid : MonoBehaviour
                 //original_trigger_material.color = _failureColor;
                 //Escondo la planta
                 this._tobaccoPlant.SetActive(false);
-                _PlasmidLiquid.SetActive(false);
+                this._PlasmidLiquid.SetActive(false);
                 break;
             default:
                 original_trigger_material.color = _originalColor;
