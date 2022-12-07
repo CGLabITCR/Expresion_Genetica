@@ -15,6 +15,7 @@ public class Plasmid : MonoBehaviour
     private Color _failureColor = new Color(1f, 0f, 0f, 0.5f);
 
     public GameObject _tobaccoPlant;
+    public GameObject _PlasmidLiquid;
     
 
     // Start is called before the first frame update
@@ -71,17 +72,19 @@ public class Plasmid : MonoBehaviour
             case "vector":
                 //Me pinto de Color Verde
                 _isCorrect = true;
-                original_trigger_material.color = _successColor;
+                //original_trigger_material.color = _successColor;
                 //Instancio la Planta
+                _PlasmidLiquid.SetActive(true);
                 this._tobaccoPlant.SetActive(true);
 
                 break;
             case "failure":
                 //Me pinto de Color Rojo 
                 _isCorrect = false;
-                original_trigger_material.color = _failureColor;
+                //original_trigger_material.color = _failureColor;
                 //Escondo la planta
-                this._tobaccoPlant.SetActive(false); 
+                this._tobaccoPlant.SetActive(false);
+                _PlasmidLiquid.SetActive(false);
                 break;
             default:
                 original_trigger_material.color = _originalColor;
