@@ -127,10 +127,18 @@ public class UnitManager : MonoBehaviour
         {
             _boardElementPieces.Add(newElementPiece);
             string tipoElemento = newElementPiece._tipoElemento.ToString();
-            string nombreElemento = newElementPiece._nombreElemento.ToString();
+            //string nombreElemento = newElementPiece._nombreElemento.ToString();
+            string detectado = " Detectado";
 
-            CanvasManager.Instance.sendNotification("Nueva PIEZA: " + nombreElemento + " de tipo: " + tipoElemento, 3);
-       
+            tipoElemento = tipoElemento.Replace("_2", "");
+            tipoElemento = tipoElemento.Replace("_", " ");
+
+            if (tipoElemento == "Enzima")
+            {
+                detectado = " Detectada";
+            }
+
+            CanvasManager.Instance.sendNotification(tipoElemento + detectado, 3);
         }
 
 
@@ -140,7 +148,7 @@ public class UnitManager : MonoBehaviour
     {
         if (!newPlasmid.CompareTag("Untagged")){
             this._pasmid = newPlasmid;
-            CanvasManager.Instance.sendNotification("Se ha detectado el plasmido", 3);
+            //CanvasManager.Instance.sendNotification("Se ha detectado el plasmido", 3);
       
         }
         
@@ -151,7 +159,7 @@ public class UnitManager : MonoBehaviour
         if (!newTestTube.CompareTag("Untagged"))
         {
             this._testTube = newTestTube;
-            CanvasManager.Instance.sendNotification("Se ha detectado el Tubo de Ensayo", 3);
+            //CanvasManager.Instance.sendNotification("Se ha detectado el Tubo de Ensayo", 3);
             if (checkConstruct())
             {
                 this._testTube.synthConstruct();
@@ -238,7 +246,7 @@ public class UnitManager : MonoBehaviour
 
             }else
             {
-                CanvasManager.Instance.sendNotification("BC-No se encontraron las unidades", 2);
+                //CanvasManager.Instance.sendNotification("BC-No se encontraron las unidades", 2);
 
             }
 
@@ -261,7 +269,7 @@ public class UnitManager : MonoBehaviour
             for (var i = 0; i < 11; i++)
             {
                 if (!_boardElementBoxes[i].getIsCorrect()) {
-                    CanvasManager.Instance.sendNotification("Hay algun elemento mal posicionado, o faltan elementos a colocar",2);
+                    //CanvasManager.Instance.sendNotification("Hay algun elemento mal posicionado, o faltan elementos a colocar",2);
                     return false; 
                 }
             }
@@ -295,11 +303,11 @@ public class UnitManager : MonoBehaviour
 
             string listLen = "Hay " +lenElementos +" elementos. Son: " + elementos;
 
-            CanvasManager.Instance.sendNotification(listLen, 5);
+            //CanvasManager.Instance.sendNotification(listLen, 5);
         }
         else
         {
-            CanvasManager.Instance.sendNotification("No hay elementos en la lista", 5);
+            //CanvasManager.Instance.sendNotification("No hay elementos en la lista", 5);
         }
         
     }

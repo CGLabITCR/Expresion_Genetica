@@ -146,8 +146,8 @@ public class ConstructBoardBox : MonoBehaviour
                 {
                     var typeStr = _tipoElemento.ToString();
                     var isWrong = " Incorrecto";
-                    typeStr.Replace("_2", "");
-                    typeStr.Replace("_", " ");
+                    typeStr = typeStr.Replace("_2", "");
+                    typeStr = typeStr.Replace("_", " ");
 
                     if (typeStr == "Enzima")
                     {
