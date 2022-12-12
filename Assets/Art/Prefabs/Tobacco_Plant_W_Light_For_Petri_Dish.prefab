@@ -4878,7 +4878,7 @@ GameObject:
   - component: {fileID: 2473481833886674952}
   - component: {fileID: 2473481833886674954}
   - component: {fileID: 2473481833886674955}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Area Light
   m_TagString: Plant
   m_Icon: {fileID: 0}
