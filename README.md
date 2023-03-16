@@ -53,17 +53,17 @@ To achieve the goal of the experiment the app will help students to:
   <li>
     <h3>Yoselyn Walsh Zúñiga </h3>
     <p>Industrial Design Engineer and Professor at ITCR</p>
-    <a href = "mailto: d4n11083@estudiantec.cr">d4n11083@estudiantec.cr</a> 
+    
   </li>
   <li>
     <h3>Rogelio</h3>
     <p>Software Engineer and Professor at ITCR</p>
-    <a href = "mailto: d4n11083@estudiantec.cr">d4n11083@estudiantec.cr</a> 
+   
   </li>
   <li>
     <h3>Daniela</h3>
     <p>Industrial Design Engineert</p>
-    <a href = "mailto: d4n11083@estudiantec.cr">d4n11083@estudiantec.cr</a> 
+    
   </li>
 
   <li>
@@ -75,7 +75,7 @@ To achieve the goal of the experiment the app will help students to:
   <li>
     <h3>Monserrat Jarquín Cordero</h3>
     <p>Biotech Enginneer and Professor at ITCR</p>
-    <a href = "mailto: d4n11083@estudiantec.cr">d4n11083@estudiantec.cr</a> 
+    
   </li>
 
 </ul>
