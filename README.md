@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="CG Lab Logo"><img src="https://www.elementalsweb.com/wp-content/themes/sd_theme/images/ar-landing/vuforia-logo.png" alt="Markdownify" width="200"></a>
+  <a href="CG Lab Logo"><img src="https://media4.giphy.com/media/AFiys5yPAzyzmCzHRU/giphy.gif?cid=ecf05e479if2edtslkzmcg47ewys0ob8gz3jjbbi74t9nb3w&rid=giphy.gif&ct=g" alt="Markdownify" width="600"></a>
   <br>
   Proyecto de Expresión Genética 
   <br>
