@@ -74,7 +74,7 @@ public class UnitManager : MonoBehaviour
     private Dictionary<ElementTypeEnum, ElementNameEnum> CorrectConstructElements = new Dictionary<ElementTypeEnum, ElementNameEnum>
     {
         {ElementTypeEnum.Enzima, ElementNameEnum.Notl},
-        {ElementTypeEnum.Start, ElementNameEnum.TAA},
+        {ElementTypeEnum.Start, ElementNameEnum.ATG},
         {ElementTypeEnum.Promotor, ElementNameEnum.CaMV_35S},
         {ElementTypeEnum.Enhancer, ElementNameEnum.RBCS2_i_2},
         {ElementTypeEnum.Gen_de_Interes, ElementNameEnum.HLF1},
@@ -83,7 +83,7 @@ public class UnitManager : MonoBehaviour
 
         {ElementTypeEnum.Promotor_2, ElementNameEnum.NOS},
         {ElementTypeEnum.Gen_de_Seleccion, ElementNameEnum.Nptll},
-        {ElementTypeEnum.Stop, ElementNameEnum.ATG},
+        {ElementTypeEnum.Stop, ElementNameEnum.TAA},
         {ElementTypeEnum.Enzima_2, ElementNameEnum.Xbal},
     };
 
